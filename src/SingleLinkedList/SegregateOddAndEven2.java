@@ -25,21 +25,20 @@ public class SegregateOddAndEven2 {
         newNode.next = node;
         node = newNode;
         return node;
-
     }
-   Node segregate(Node node){
+   Node segregate(Node head){
        Node current = null;
-        if (node== null){
+        if (head== null){
             return null;
         }
-        while (node!=null){
-            if (node.data%2 == 0){
-               evenHead =  insert(evenHead , node.data);
+        while (head!=null){
+            if (head.data%2 == 0){
+               evenHead =  insert(evenHead , head.data);
             }
             else{
-              oddHead = insert(oddHead , node.data);
+              oddHead = insert(oddHead , head.data);
             }
-            node = node.next;
+            head = head.next;
         }
 
        Node temp = oddHead;
