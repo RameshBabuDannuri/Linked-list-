@@ -3,6 +3,18 @@ package SingleLinkedList;
 public class FindInterSectionPoint {
      Node head1;
      Node head2;
+    int count(Node node){
+        int count = 0;
+        if (node == null){
+            return -1;
+        }
+        while (node!=null){
+            count++;
+            node = node.next;
+
+        }
+        return count;
+    }
      int getNode(){
          int pc = count(head1);
          int qc = count(head2);
@@ -40,18 +52,7 @@ public class FindInterSectionPoint {
 
 
     }
-    int count(Node node){
-        int count = 0;
-        if (node == null){
-            return -1;
-        }
-        while (node!=null){
-            count++;
-            node = node.next;
 
-        }
-        return count;
-    }
     public static void main(String args[]){
         FindInterSectionPoint list = new FindInterSectionPoint();
         list.head1 = new Node(3);
